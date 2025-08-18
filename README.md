@@ -56,7 +56,6 @@ A Bash script to assemble x86 instructions (inline or from a file) and extract t
 ./asm2hex.sh file.asm
 ```
 
----
 
 ## hex2asm.sh
 
@@ -68,5 +67,28 @@ A Bash script to convert a hex string (e.g., shellcode) back to x86 assembly ins
 ./hex2asm.sh "\x31\xc0\xb0\x01\xcd\x80"
 ```
 
+---
+
+## asm2hex.sh & hex2asm.sh
+
+These Bash scripts help convert between x86 assembly and shellcode hex bytes:
+- **asm2hex.sh**: Assemble x86 instructions (inline or from a file) and extract their opcodes as hex bytes.
+- **hex2asm.sh**: Convert a hex string (e.g., shellcode) back to x86 assembly instructions using objdump.
+
+### Usage
+
+To convert assembly to hex:
+```bash
+./asm2hex.sh "mov eax, 1; int 0x80"
+./asm2hex.sh file.asm
+```
+
+To convert hex to assembly:
+```bash
+./hex2asm.sh "\x31\xc0\xb0\x01\xcd\x80"
+```
+
+![Example: asm2hex.sh & hex2asm.sh](images/hex2asm_asm2hex.png)
+*Example: Using asm2hex.sh & hex2asm.sh*
 
 For more details, see comments in each script.
