@@ -56,17 +56,6 @@ A Bash script to assemble x86 instructions (inline or from a file) and extract t
 ./asm2hex.sh file.asm
 ```
 
-
-## hex2asm.sh
-
-A Bash script to convert a hex string (e.g., shellcode) back to x86 assembly instructions using objdump.
-
-### Usage
-
-```bash
-./hex2asm.sh "\x31\xc0\xb0\x01\xcd\x80"
-```
-
 ---
 
 ## asm2hex.sh & hex2asm.sh
